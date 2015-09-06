@@ -14,7 +14,7 @@
     <contex:component-scan base-package="org.braidner.blog.controller"/>
 
     <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/pages/"/>
+        <property name="prefix" value="/WEB-INF/pages/"/>
         <property name="suffix" value=".html"/>
     </bean>
 </beans>
