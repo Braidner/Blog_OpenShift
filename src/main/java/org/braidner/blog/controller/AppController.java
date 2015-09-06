@@ -11,11 +11,11 @@ public class AppController {
 
     @RequestMapping({"/", "/index"})
     public String index() {
-        return "index";
+        return "test";
     }
 
     @RequestMapping({"/hello"})
     public String hello() {
-        return "hello";
+        return "test";
     }
 }
