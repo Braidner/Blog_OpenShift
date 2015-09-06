@@ -1,0 +1,8 @@
+===JBoss===
+Username: adminAHV8NAc
+Password: t4leKXJ6sn4-
+===Postgres===
+Root User: adminm2echl4
+Root Password: 8pT3LUrM1P3j
+Database Name: blog
+postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT/blog
