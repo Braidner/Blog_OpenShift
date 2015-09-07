@@ -57,5 +57,9 @@
     <orderEntry type="library" name="Maven: org.hibernate.common:hibernate-commons-annotations:5.0.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate:hibernate-entitymanager:5.0.1.Final" level="project" />
     <orderEntry type="library" name="Maven: org.postgresql:postgresql:9.4-1202-jdbc42" level="project" />
+    <orderEntry type="library" name="angular" level="application" />
+    <orderEntry type="library" name="angular-animate" level="application" />
+    <orderEntry type="library" name="angular-aria" level="application" />
+    <orderEntry type="library" name="angular-material" level="application" />
   </component>
 </module>

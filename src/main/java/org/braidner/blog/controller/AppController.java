@@ -11,7 +11,7 @@ public class AppController {
 
     @RequestMapping({"/", "/index"})
     public String index() {
-        return "test";
+        return "index";
     }
 
     @RequestMapping({"/hello"})
