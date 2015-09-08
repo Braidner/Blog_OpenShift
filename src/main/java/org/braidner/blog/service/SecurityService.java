@@ -31,10 +31,6 @@ public class SecurityService {
 
     public User test() {
         User user = new User();
-        user.setFirstName("Test");
-        user.setLastName("Test");
-        user.setLogin("Braidner");
-        user.setPassword("123");
         return null;
     }
 }
