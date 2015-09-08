@@ -1,6 +1,7 @@
 package org.braidner.blog.service;
 
 import org.braidner.blog.entity.User;
+import org.braidner.blog.entity.enums.OAuthProvider;
 import org.braidner.blog.filter.UserFilter;
 import org.braidner.blog.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,12 +16,13 @@ public class SecurityService {
     @Autowired
     private UserRepository userRepository;
 
-    public boolean isLoggined() {
+    public boolean isLogined() {
         return false;
     }
 
-    public User login() throws Exception {
-        User user = userRepository.findByLogin("braidner");
+    public User login(String login, String password, OAuthProvider provider, String oauthId) throws Exception {
+        UserFilter userFilter = new UserFilter(login, password, provider, oauthId);
+        User user = userRepository.findUser(userFilter);
 
         if (user == null) {
             throw new Exception("User not found");

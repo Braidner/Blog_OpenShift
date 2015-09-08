@@ -18,7 +18,7 @@ public class SecurityController {
 
     @RequestMapping("login")
     public String login() {
-        if (securityService.isLoggined()) {
+        if (securityService.isLogined()) {
             return null;
         }
         return null;

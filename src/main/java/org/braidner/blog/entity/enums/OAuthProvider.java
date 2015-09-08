@@ -10,5 +10,5 @@ public enum OAuthProvider {
         this.param = param;
     }
 
-    String param;
+    public String param;
 }

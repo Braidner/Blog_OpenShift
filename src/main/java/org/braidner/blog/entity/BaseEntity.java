@@ -1,21 +1,23 @@
 package org.braidner.blog.entity;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
 *  Created by Braidner on 9/4/2015.
 */
+@Entity
 public class BaseEntity implements Serializable {
 
     @Id
-    private String id;
+    protected String id;
 
     @LastModifiedDate
-    private LocalDateTime updated;
+    protected LocalDateTime updated;
 
     @Override
     public boolean equals(Object o) {
