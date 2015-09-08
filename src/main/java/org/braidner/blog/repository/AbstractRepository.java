@@ -1,6 +1,5 @@
 package org.braidner.blog.repository;
 
-import com.sun.deploy.util.ReflectionUtil;
 import org.apache.commons.lang3.reflect.FieldUtils;
 import org.braidner.blog.entity.BaseEntity;
 import org.braidner.blog.repository.filter.SearchFilter;
@@ -9,10 +8,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.util.ReflectionUtils;
 
 import java.util.Set;
-import java.util.function.Consumer;
 
 /**
  * Created by Braidner on 9/8/2015.
