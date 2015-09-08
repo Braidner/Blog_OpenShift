@@ -3,5 +3,9 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/resources/js/angular.min.js" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/resources/js/angular/angular-animate.js" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/resources/js/angular/angular-aria.js" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/resources/js/angular/angular-material.js" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/resources/js/angular/angular.js" charset="windows-1252" />
   </component>
 </project>

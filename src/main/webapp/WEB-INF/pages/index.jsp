@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Braidner Blog</title>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/angular-material.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     <meta name="viewport" content="initial-scale=1" />
 </head>
@@ -37,11 +37,11 @@
 </div>
 
 <!-- Angular Material Dependencies -->
-<script src="${pageContext.request.contextPath}/resources/js/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/angular/angular.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/angular/angular-animate.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/angular/angular-aria.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/angular/angular-material.js"></script>
 <script src="${pageContext.request.contextPath}/resources/js/app.js"></script>
 </body>
 </html>
