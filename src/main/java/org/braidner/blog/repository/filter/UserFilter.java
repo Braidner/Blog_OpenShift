@@ -6,10 +6,35 @@ import org.braidner.blog.entity.enums.OAuthProvider;
  * Created by Braidner on 9/8/2015.
  */
 public class UserFilter implements SearchFilter {
+    private Long id;
     private String login;
     private String password;
-    private OAuthProvider provider;
+    private String provider;
     private String oauthId;
+
+    public UserFilter() {
+    }
+
+    public UserFilter(Long id, String login, String password) {
+        this.id = id;
+        this.login = login;
+        this.password = password;
+    }
+
+    public UserFilter(String login, String password, OAuthProvider provider, String oauthId) {
+        this.login = login;
+        this.password = password;
+        this.provider = provider.name();
+        this.oauthId = oauthId;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getLogin() {
         return login;
@@ -27,11 +52,11 @@ public class UserFilter implements SearchFilter {
         this.password = password;
     }
 
-    public OAuthProvider getProvider() {
+    public String getProvider() {
         return provider;
     }
 
-    public void setProvider(OAuthProvider provider) {
+    public void setProvider(String provider) {
         this.provider = provider;
     }
 

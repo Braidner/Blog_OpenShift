@@ -1,7 +1,7 @@
 package org.braidner.blog.repository;
 
 import org.apache.commons.lang3.reflect.FieldUtils;
-import org.braidner.blog.entity.BaseEntity;
+import org.braidner.blog.entity.config.BaseEntity;
 import org.braidner.blog.repository.filter.SearchFilter;
 import org.hibernate.Filter;
 import org.hibernate.Session;
@@ -30,5 +30,10 @@ public abstract class AbstractRepository {
     public<T extends SearchFilter> void setFilterParameters(T filter, Filter hibernateFilter) {
         Set<String> parameterNames = hibernateFilter.getFilterDefinition().getParameterNames();
         parameterNames.forEach(s -> hibernateFilter.setParameter(s, FieldUtils.getDeclaredField(filter.getClass(), s, true)));
+    }
+
+    @SuppressWarnings("unchecked")
+    public <T extends BaseEntity> T saveEntity(T entity) {
+        return (T) getSession().save(entity);
     }
 }

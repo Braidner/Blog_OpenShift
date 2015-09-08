@@ -2,8 +2,8 @@ package org.braidner.blog.service;
 
 import org.braidner.blog.entity.User;
 import org.braidner.blog.entity.enums.OAuthProvider;
-import org.braidner.blog.filter.UserFilter;
 import org.braidner.blog.repository.UserRepository;
+import org.braidner.blog.repository.filter.UserFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

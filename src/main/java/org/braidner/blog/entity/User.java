@@ -1,5 +1,6 @@
 package org.braidner.blog.entity;
 
+import org.braidner.blog.entity.config.AuditableEntity;
 import org.braidner.blog.entity.enums.OAuthProvider;
 import org.hibernate.annotations.*;
 
@@ -23,7 +24,7 @@ import javax.persistence.Entity;
         @Filter(name = User.FILTER_BASIC_LOGIN, condition = "login = :login and password = :password"),
         @Filter(name = User.FILTER_OAUTH_LOGIN, condition = "oauth_provider = :provider and oauth_id = :oauthId")
 })
-public class User extends BaseEntity {
+public class User extends AuditableEntity {
     public static final String FILTER_BASIC_LOGIN = "FILTER_BASIC_LOGIN";
     public static final String FILTER_OAUTH_LOGIN = "FILTER_OAUTH_LOGIN";
 
@@ -80,5 +81,14 @@ public class User extends BaseEntity {
 
     public void setProvider(OAuthProvider provider) {
         this.provider = provider;
+    }
+
+    @Override
+    public String getDetail() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(" User id: ").append(id);
+        sb.append(" User login: ").append(login);
+        sb.append(" User password: ").append(password);
+        return sb.toString();
     }
 }

@@ -1,9 +1,11 @@
 package org.braidner.blog.repository;
 
 import org.braidner.blog.entity.User;
-import org.braidner.blog.filter.UserFilter;
+import org.braidner.blog.repository.filter.UserFilter;
 import org.hibernate.Filter;
 import org.springframework.stereotype.Repository;
+
+import java.time.LocalDateTime;
 
 /**
  * Created by Braidner on 9/4/2015.
@@ -21,5 +23,9 @@ public class UserRepository extends AbstractRepository {
 
     public User findUser(Long id) {
         return findEntity(User.class, id);
+    }
+
+    public void createUser(User user) {
+        user.setUpdated(LocalDateTime.now());
     }
 }
