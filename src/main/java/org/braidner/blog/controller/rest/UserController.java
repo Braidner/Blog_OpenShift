@@ -17,7 +17,7 @@ public class UserController {
     @Autowired
     private SecurityService securityService;
 
-    @RequestMapping(value = "/create", method = RequestMethod.PUT)
+    @RequestMapping(value = "create", method = RequestMethod.PUT)
     public HttpStatus createUser() {
         User user = new User();
         user.setLogin("Braidner");
