@@ -25,7 +25,8 @@ public class UserRepository extends AbstractRepository {
         return findEntity(User.class, id);
     }
 
-    public void createUser(User user) {
+    public User createUser(User user) {
         user.setUpdated(LocalDateTime.now());
+        return saveEntity(user);
     }
 }

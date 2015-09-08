@@ -31,6 +31,10 @@ public class SecurityService {
         return user;
     }
 
+    public User createUser(User user) {
+        return userRepository.createUser(user);
+    }
+
     public User test() {
         User user = new User();
         return null;
