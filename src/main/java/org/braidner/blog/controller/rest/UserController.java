@@ -36,5 +36,4 @@ public class UserController {
     public User findUser() {
         throw new ResourceNotFoundException("User not found");
     }
-
 }
