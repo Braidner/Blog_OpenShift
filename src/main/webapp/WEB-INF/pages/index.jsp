@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="StarterApp">
 <head>
     <meta charset="UTF-8">
     <title>Braidner Blog</title>
