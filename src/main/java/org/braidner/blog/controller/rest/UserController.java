@@ -1,6 +1,7 @@
 package org.braidner.blog.controller.rest;
 
 import org.braidner.blog.controller.exception.BadRequestException;
+import org.braidner.blog.controller.exception.ResourceNotFoundException;
 import org.braidner.blog.entity.User;
 import org.braidner.blog.service.SecurityService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,11 @@ public class UserController {
             throw new BadRequestException();
         }
         return user;
+    }
+
+    @RequestMapping("find")
+    public User findUser() {
+        throw new ResourceNotFoundException("User not found");
     }
 
 }
