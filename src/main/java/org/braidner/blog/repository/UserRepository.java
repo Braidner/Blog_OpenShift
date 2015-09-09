@@ -4,6 +4,7 @@ import org.braidner.blog.entity.User;
 import org.braidner.blog.repository.filter.UserFilter;
 import org.hibernate.Filter;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
  * Created by Braidner on 9/4/2015.
  */
 @Repository
+@Transactional
 public class UserRepository extends AbstractRepository {
 
     public User findUser(UserFilter filter) {

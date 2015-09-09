@@ -1,5 +1,6 @@
 package org.braidner.blog.controller.rest;
 
+import org.braidner.blog.controller.exception.BadRequestException;
 import org.braidner.blog.entity.User;
 import org.braidner.blog.service.SecurityService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +19,15 @@ public class UserController {
     private SecurityService securityService;
 
     @RequestMapping(value = "create")
-    public HttpStatus createUser() {
+    public User createUser() {
         User user = new User();
         user.setLogin("Braidner");
         user.setPassword("123");
         user = securityService.createUser(user);
-        return user != null ? HttpStatus.CREATED : HttpStatus.BAD_REQUEST;
+        if (user == null) {
+            throw new BadRequestException();
+        }
+        return user;
     }
+
 }
