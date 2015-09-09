@@ -3,15 +3,12 @@ package org.braidner.blog.controller;
 import org.braidner.blog.controller.exception.BadRequestException;
 import org.braidner.blog.controller.exception.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author KuznetsovNE/ 09.09.2015.
  */
-@Controller
+@ControllerAdvice(annotations = RestController.class)
 public class ExceptionController {
 
     @ExceptionHandler(ResourceNotFoundException.class)
