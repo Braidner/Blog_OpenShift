@@ -37,6 +37,6 @@ public class SecurityService {
 
     public User test() {
         User user = new User();
-        return null;
+        return user;
     }
 }
